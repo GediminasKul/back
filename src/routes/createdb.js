@@ -34,7 +34,7 @@ createNewDb.post('/Database/logs', async (req, res) => {
   }
 });
 
-createNewDb('/Database/medications', async (req, res) => {
+createNewDb.post('/Database/medications', async (req, res) => {
   let conn;
   try {
     conn = await mysql.createConnection(dbConfig);

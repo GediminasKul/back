@@ -7,6 +7,7 @@ const { PORT } = require('./config');
 const petsRoutes = require('./routes/petsRoutes');
 const { dbConfig } = require('./routes/dbsetup');
 const { connect } = require('./routes/petsRoutes');
+const createNewDb = require('./routes/createdb');
 
 app.use(cors());
 app.use(morgan('dev'));
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // routes
 app.use('/api', petsRoutes);
+app.use('/data', createNewDb);
 
 app.get('/', async (req, res) => {
   let connection;
