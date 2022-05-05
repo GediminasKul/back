@@ -34,3 +34,5 @@ app.all('*', (req, res) => {
 });
 
 app.listen(PORT, () => console.log('server is running', PORT));
+
+// RANDOM KODO PAKEITIMAI
